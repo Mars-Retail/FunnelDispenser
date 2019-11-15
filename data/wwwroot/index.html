@@ -1,0 +1,50 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable=0">
+    <title>My MMS Dispenser Setup</title>
+    <style>
+
+        #networkInfo label {
+            display: inline-block;
+            width: 5em;
+            text-align: right;
+            padding-right: 0.5em;
+        }
+
+        #networkInfo input {
+            display: inline-block;
+        }
+
+        #buttons {
+            padding-left:90px;
+            padding-top:40px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="boxes">
+        <img style="padding-left:30px" src="./images/characters.png" />
+        <p>
+            <h3 style="padding-left:60px">My M&M's Dispenser Setup</h3>
+            <ul>
+                <li>Please enter your network information below</li>
+            </ul>
+        </p>
+        <FORM action="/" method="post">
+            <div id="networkInfo">
+                <div id="input1" style="margin-bottom:4px;" class="input">
+                    <label for="SSID">SSID</label><input name="SSID" id="SSID" type="text">
+                </div>
+                <div id="input2" style="margin-bottom:4px;" class="input">
+                    <label for="Password">Password</label><input id="SSIDPass" name="SSIDPass" type="text">
+                </div>
+                <div id="buttons"><INPUT type="submit" value="Save">&nbsp;&nbsp;&nbsp;&nbsp; <INPUT type="reset"></div>
+            </div>
+        </FORM>
+    </div>
+</body>
+</html>
