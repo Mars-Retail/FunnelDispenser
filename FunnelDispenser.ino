@@ -208,10 +208,13 @@ void loop()
    {
      Serial.println("RTC Stored Read: ");
      Serial.println("Distance Data: ");
+     if((rtcData.Distance_RTC<0)||(rtcData.Distance_RTC>200))rtcData.Distance_RTC=0;
      Serial.println(rtcData.Distance_RTC);
      Serial.println("Temp Data: ");
+     if((rtcData.Temperature_RTC<0)||(rtcData.Temperature_RTC>200))rtcData.Temperature_RTC=0;
      Serial.println(rtcData.Temperature_RTC);
      Serial.println("Humidity Data: ");
+     if((rtcData.Humidity_RTC<0)||(rtcData.Humidity_RTC>200))rtcData.Humidity_RTC=0;
      Serial.println(rtcData.Humidity_RTC);  
      Serial.println();
      /* Wake Distance Snesor */
@@ -372,6 +375,7 @@ void loop()
           }  
           else 
           {
+            Run_Flag=0;
             Serial.println("Not connected to hub");
           }      
       }

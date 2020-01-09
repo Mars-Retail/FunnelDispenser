@@ -34,6 +34,7 @@ void connect()
 
     while (WiFi.status() != WL_CONNECTED)
     {
+        yield();
         ControlLed(greenLed, state);
         if(state == HIGH)
           state = LOW;
